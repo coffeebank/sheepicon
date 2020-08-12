@@ -8,9 +8,9 @@ layout: default
   <div class="p-2 md:p-4 lg:p-8">
     <div class="grid gap-2 grid-cols-3 sm:grid-cols-6 lg:grid-cols-6 lg:mx-auto" style="max-width:1200px;">
       {% for ee in page.emotes %}
-        <div class="p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer lpcards flex flex-wrap lg:flex-no-wrap justify-center lg:justify-start items-start lg:items-center text-center lg:text-left">
+        <div class="p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer lpcards flex flex-wrap lg:flex-no-wrap justify-center lg:justify-start items-start lg:items-center text-center lg:text-left clipjs waves-effect waves-light" data-clipboard-text="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}" id="{{ ee.name }}">
           <div class="w-full lg:w-auto">
-            <img src="{{ ee.url }}&size=64" class="w-12 h-12 lg:w-16 lg:h-16 mx-auto lg:mx-0 object-contain" />
+            <img src="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}" class="w-12 h-12 lg:w-16 lg:h-16 mx-auto lg:mx-0 object-contain" />
           </div>
           <p class="break-all leading-tight pt-4 lg:pt-0 lg:pl-4">{{ ee.name }}</p>
         </div>
@@ -19,3 +19,12 @@ layout: default
   </div>
 
 </div>
+
+<div class="fixed bottom-0 right-0 p-4 hidden clipjsalert">
+  <div class="rounded shadow-xl bg-green-700 text-white p-4">
+    <span>✅&ensp;Copied </span><span id="clipjscontent"></span>
+  </div>
+</div>
+
+<script type="text/javascript" src="assets/clipboard-2.0.6.min.js"></script>
+<script type="text/javascript" src="assets/scripts-emotes.js"></script>
