@@ -3,7 +3,10 @@ description: Easily copy links to emotes and other image links with a click!
 baseurl: "/lambpost" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-size64: false
+# Settings
+size64: false # Resizes emotes for Discord use
+titleInUrl: false # Adds emote name to url
+
 
 # Build settings
 theme: minima

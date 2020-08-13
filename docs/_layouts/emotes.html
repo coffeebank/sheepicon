@@ -8,11 +8,11 @@ layout: default
   <div class="p-2 md:p-4 lg:p-8">
     <div class="grid gap-2 grid-cols-3 sm:grid-cols-6 lg:grid-cols-6 lg:mx-auto" style="max-width:1200px;">
       {% for ee in page.emotes %}
-        <div class="p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer lpcards flex flex-wrap lg:flex-no-wrap justify-center lg:justify-start items-start lg:items-center text-center lg:text-left clipjs waves-effect waves-light" data-clipboard-text="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}" id="{{ ee.name }}">
+        <div class="p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer lpcards flex flex-wrap lg:flex-no-wrap justify-center lg:justify-start items-start lg:items-center text-center lg:text-left clipjs waves-effect waves-light" data-clipboard-text="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}{% if site.titleInUrl == true %}&emote={{ ee.name }}{% endif %}" id="{{ ee.name }}">
           <div class="w-full lg:w-auto">
             {% assign emoteurl = ee.url %}
             {% capture is_gif %}{% if emoteurl contains '.gif' %}yes{% else %}no{% endif %}{% endcapture%}
-            <img {% if is_gif == 'yes' %}data-gifffer="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}"{% else %}src="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}"{% endif %} class="w-12 h-12 lg:w-16 lg:h-16 mx-auto lg:mx-0 object-contain" />
+            <img {% if is_gif == 'yes' %}data-gifffer="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}{% if site.titleInUrl == true %}&emote={{ ee.name }}{% endif %}"{% else %}src="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}{% if site.titleInUrl == true %}&emote={{ ee.name }}{% endif %}"{% endif %} class="w-12 h-12 lg:w-16 lg:h-16 mx-auto lg:mx-0 object-contain" />
           </div>
           <p class="break-all leading-tight pt-4 lg:pt-0 lg:pl-4">{{ ee.name }}</p>
         </div>
