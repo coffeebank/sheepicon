@@ -10,7 +10,7 @@ clipboard.on('success', function(e) {
   console.info('Text:', e.text);
   console.info('Trigger:', e.trigger);
   document.getElementById("clipjscontent").innerHTML = e.trigger.id;
-  $( "div.clipjsalert" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
+  document.querySelector("div.clipjsalert").fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
 });
 
 clipboard.on('error', function(e) {
