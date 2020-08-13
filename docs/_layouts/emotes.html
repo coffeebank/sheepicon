@@ -10,7 +10,9 @@ layout: default
       {% for ee in page.emotes %}
         <div class="p-4 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer lpcards flex flex-wrap lg:flex-no-wrap justify-center lg:justify-start items-start lg:items-center text-center lg:text-left clipjs waves-effect waves-light" data-clipboard-text="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}" id="{{ ee.name }}">
           <div class="w-full lg:w-auto">
-            <img src="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}" class="w-12 h-12 lg:w-16 lg:h-16 mx-auto lg:mx-0 object-contain" />
+            {% assign emoteurl = ee.url %}
+            {% capture is_gif %}{% if emoteurl contains '.gif' %}yes{% else %}no{% endif %}{% endcapture%}
+            <img {% if is_gif == 'yes' %}data-gifffer="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}"{% else %}src="{{ ee.url }}{% if site.size64 == true %}&size=64{% endif %}"{% endif %} class="w-12 h-12 lg:w-16 lg:h-16 mx-auto lg:mx-0 object-contain" />
           </div>
           <p class="break-all leading-tight pt-4 lg:pt-0 lg:pl-4">{{ ee.name }}</p>
         </div>
@@ -26,5 +28,6 @@ layout: default
   </div>
 </div>
 
-<script type="text/javascript" src="assets/clipboard-2.0.6.min.js"></script>
-<script type="text/javascript" src="assets/scripts-emotes.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/gifffer-0.32.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/clipboard-2.0.6.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/scripts-emotes.js"></script>

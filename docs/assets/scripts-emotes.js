@@ -1,3 +1,7 @@
+window.onload = function() {
+  Gifffer();
+}
+
 new ClipboardJS('.clipjs');
 
 var clipboard = new ClipboardJS('.clipjs');
