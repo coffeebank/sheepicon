@@ -3,6 +3,7 @@
 
 :root {
   --cardbg: #262626;
+  --navactive: #313131;
 }
 
 body {
@@ -20,4 +21,8 @@ p {
 
 .lpcards {
   background-color: var(--cardbg);
+}
+
+.lpactive {
+  background-color: var(--navactive);
 }

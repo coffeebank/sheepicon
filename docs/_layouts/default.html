@@ -25,16 +25,34 @@
   
 </head>
 <body>
-  <header class="flex flex-wrap md:flex-no-wrap items-center justify-between px-4 py-3 md:fixed w-full h-auto md:h-20 xl:h-24 md:shadow-lg" style="background-color:#222;">
-    <div class="flex no-wrap py-2 items-center w-full justify-center md:w-auto md:justify-left">
-      <img class="h-8 mr-4" src="media/favicon-32x32.png" alt="Lambpost">
-      <h1 class="text-white text-2xl font-bold">{{ site.title }}</h1>
+  <header class="navbar-fixed flex flex-wrap md:flex-no-wrap items-center justify-between px-4 pt-3 md:py-3 md:fixed w-full h-auto md:h-20 xl:h-24 md:shadow-lg" style="background-color:#222;">
+    <div class="flex no-wrap pt-2 pb-4 md:py-2 items-center w-full justify-center md:w-auto md:justify-left">
+      <a href="{{ site.baseurl }}/">
+        <img class="h-8 mr-4" src="media/favicon-32x32.png" alt="Lambpost">
+      </a>
+      <a href="{{ site.baseurl }}/">
+        <h1 class="text-white text-2xl font-bold">{{ site.title }}</h1>
+      </a>
     </div>
-    <!-- <div class="flex flex-no-wrap py-4 items-center w-full justify-center md:w-auto overflow-x-auto overflow-y-hidden">
-      <h2 class="text-white text-xl mx-4">Emotes</h2>
-      <h2 class="text-white text-xl mx-4">Emotes</h2>
-      <h2 class="text-white text-xl mx-4">Emotes</h2>
-    </div> -->
+    <div class="flex flex-no-wrap py-0 md:py-4 items-center w-full justify-center md:w-auto overflow-x-auto overflow-y-hidden">
+      
+      <a href="{{ site.baseurl }}/">
+        <div class="md:h-20 xl:h-24 hidden md:flex items-center justify-center hover:bg-gray-800 transition duration-300{% if page.name == 'index.md' %} lpactive{% endif%}">
+          <h2 class="text-white text-xl mx-4">Home</h2>
+        </div>
+      </a>
+
+      {% assign lpnav = site.pages | where:"layout","emotes" %}
+      {% for navitem in lpnav %}
+        {% assign trimmed = navitem.name | size | minus: 3 %}
+        <a href="{{ site.baseurl }}{{ navitem.url }}">
+          <div class="p-4 md:p-0 md:h-20 xl:h-24 flex items-center justify-center hover:bg-gray-800 transition duration-300{% if page.name == navitem.name %} lpactive{% endif%}">
+            <h2 class="text-white text-xl mx-4">{{ navitem.name | capitalize| slice: 0, trimmed }}</h2>
+          </div>
+        </a>
+      {% endfor %}
+      
+    </div>
   </header>
 
   <div id="lpbody" class="md:pt-20 xl:pt-24">
