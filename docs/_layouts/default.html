@@ -61,13 +61,13 @@
 
   <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 lpbodybg text-gray-500 shadow-lg">
 		<div id="tabs" class="flex justify-between">
-      <a href="{{ site.baseurl }}/" class="w-full hover:text-gray-200 transition duration-300 justify-center inline-block text-center pt-2 pb-1{% if page.name == 'index.md' %} text-white lpactive{% endif%}">
+      <a href="{{ site.baseurl }}/" class="w-full waves-effect waves-light hover:text-gray-200 transition duration-300 justify-center inline-block text-center pt-2 pb-1{% if page.name == 'index.md' %} text-white lpactive{% endif%}">
         <span class="material-icons">favorite</span>
         <span class="tab tab-home block">Favorites</span>
       </a>
       {% assign lpnav = site.pages | where:"layout","emotes" %}
       {% for navitem in lpnav %}
-        <a href="{{ site.baseurl }}{{ navitem.url }}" class="w-full focus:text-white hover:text-gray-200 transition duration-300 justify-center inline-block text-center pt-2 pb-1{% if page.name == navitem.name %} text-white lpactive{% endif%}">
+        <a href="{{ site.baseurl }}{{ navitem.url }}" class="w-full waves-effect waves-light hover:text-gray-200 transition duration-300 justify-center inline-block text-center pt-2 pb-1{% if page.name == navitem.name %} text-white lpactive{% endif%}">
           <span class="material-icons">{% if navitem.name == 'animated.md' %}slow_motion_video{% elsif navitem.name == 'emotes.md' %}insert_emoticon{% else %}category{% endif %}</span>
           {% assign trimmed = navitem.name | size | minus: 3 %}
           <span class="tab tab-home block">{{ navitem.name | capitalize| slice: 0, trimmed }}</span>
