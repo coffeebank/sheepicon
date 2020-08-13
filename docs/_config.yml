@@ -1,23 +1,22 @@
+# Your Website
+
 title: Lambpost
 description: Easily copy links to emotes and other image links with a click!
 baseurl: "/lambpost" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+
 # Settings
+
 size64: false # Resizes emotes for Discord use
 titleInUrl: false # Adds emote name to url
 
 
+# --- Default Settings (do not change) ---
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-
-# Collections
-# collections:
-#   emotes:
-#     output: true
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
