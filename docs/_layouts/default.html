@@ -59,27 +59,6 @@
     {{ content }}
   </div>
 
-
-  <!-- <div class="fixed md:hidden bottom-0 flex-no-wrap py-4 items-center w-full justify-center">
-      
-    <a href="{{ site.baseurl }}/" class="w-full">
-      <div class="items-center justify-center hover:bg-gray-800 transition duration-300{% if page.name == 'index.md' %} lpactive{% endif%}">
-        <h2 class="text-white text-xl mx-4">Home</h2>
-      </div>
-    </a>
-
-    {% assign lpnav = site.pages | where:"layout","emotes" %}
-    {% for navitem in lpnav %}
-      {% assign trimmed = navitem.name | size | minus: 3 %}
-      <a href="{{ site.baseurl }}{{ navitem.url }}">
-        <div class="p-4 md:p-0 md:h-20 xl:h-24 flex items-center justify-center hover:bg-gray-800 transition duration-300{% if page.name == navitem.name %} lpactive{% endif%}">
-          <h2 class="text-white text-xl mx-4">{{ navitem.name | capitalize| slice: 0, trimmed }}</h2>
-        </div>
-      </a>
-    {% endfor %}
-    
-  </div> -->
-
   <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 lpbodybg text-gray-500 shadow-lg">
 		<div id="tabs" class="flex justify-between">
       <a href="{{ site.baseurl }}/" class="w-full hover:text-gray-200 transition duration-300 justify-center inline-block text-center pt-2 pb-1{% if page.name == 'index.md' %} text-white lpactive{% endif%}">
