@@ -2,12 +2,13 @@
 ---
 
 :root {
+  --bodybg: #222222;
   --cardbg: #262626;
   --navactive: #313131;
 }
 
-body {
-  background-color: #222;
+body, .lpbodybg {
+  background-color: var(--bodybg);
 }
 
 p {
