@@ -12,10 +12,13 @@
     {
       "src": "{{ site.baseurl }}/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "theme_color": "#222222",
-  "background_color": "#222222",
-  "display": "standalone"
+  "theme_color": "{{ site.themeBgPrimary }}",
+  "background_color": "{{ site.themeBgPrimary }}",
+  "display": "standalone",
+  "start_url": "{{ site.baseurl }}/",
+  "scope": "{{ site.baseurl }}/"
 }

@@ -2,9 +2,9 @@
 ---
 
 :root {
-  --bodybg: #222222;
+  --bodybg: {{ site.themeBgPrimary }};
   --cardbg: #262626;
-  --navactive: #313131;
+  --navactive: {{ site.themeBgSecondary }};
 }
 
 body, .lpbodybg {

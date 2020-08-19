@@ -6,6 +6,13 @@ baseurl: "/lambpost" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 
+# Theme
+
+themeBgPrimary: "#222222"
+themeBgSecondary: "#313131"
+themeCards: "#262626"
+
+
 # Settings
 
 size64: false # Resizes emotes for Discord use
