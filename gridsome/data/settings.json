@@ -1,0 +1,21 @@
+{
+  "sidebar": [
+    {
+      "section": "Pinned",
+      "topics": [
+        {
+          "title": "Favorites",
+          "slug": "fav"
+        },
+        {
+          "title": "Animated",
+          "slug": "animated"
+        },
+        {
+          "title": "Emotes",
+          "slug": "emotes"
+        }
+      ]
+    }
+  ]
+}
