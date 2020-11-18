@@ -1,8 +1,12 @@
 ![Picture of a lamb](https://raw.githubusercontent.com/coffeebank/lambpost/master/lambpost.png)
 
-# Lambpost
+# Sheepicon
 
 Easily copy links to emotes and other image links with a click!
+
+Works with saving and sending Discord emotes you don't have, even without Nitro :)
+
+Comes with a read-only REST API for the image links!
 
 ![Usage preview](https://raw.githubusercontent.com/coffeebank/lambpost/master/sample.gif)
 
@@ -19,22 +23,26 @@ Easily copy links to emotes and other image links with a click!
 ## Usage
 
 Edit `_config.yml` with your information
-  - For Discord emotes, turn on `size64`
+  - Sheepicon can be used with Discord emotes by setting these options:
+    - size64: true
+    - titleInUrl: true
 
 Edit `index.md` for your Favorites
   - `animated.md` and `emotes.md` are extra pages for if you have a lot more emotes.
   - Creating new `.md` files will add them to the navbar automatically!
+  - The API does not list `index.md` emotes.
 
 
 ## Updates
 
-Start a pull request and merge `coffeebank/lambpost` into your repo to update.
+Start a pull request and merge `coffeebank/sheepicon` into your repo to update.
 
 
 ## Attributions
 
 - Brand image: [Deirdre Corcoran Foote, Unsplash, no affiliation](https://unsplash.com/photos/kGLbAP1XzAI)
 - Sample image: [Anna Claire Schellenberg, Unsplash, no affiliation](https://unsplash.com/photos/cI0Z_qBexMw)
+- Sample image: [Casey Horner, Unsplash, no affiliation](https://unsplash.com/photos/SLsXjFp4YGA)
 - [zenorocha/clipboard.js](https://github.com/zenorocha/clipboard.js/)
 - [krasimir/gifffer](https://github.com/krasimir/gifffer/)
-- Powered by Jekyll, Sass, and GitHub Pages
+- Powered by Jekyll, SCSS, and GitHub Pages

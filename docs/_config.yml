@@ -1,8 +1,8 @@
 # Your Website
 
-title: Lambpost
+title: Sheepicon
 description: Easily copy links to emotes and other image links with a click!
-baseurl: "/lambpost" # the subpath of your site, e.g. /blog
+baseurl: "/sheepicon" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 

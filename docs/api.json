@@ -1,0 +1,12 @@
+---
+---
+
+[
+  {% assign lpnav = site.pages | where:"layout","emotes" %}{% for page in lpnav %}{% assign trimmed = page.name | size | minus: 3 %}{
+    "title": "{{ page.name | slice: 0, trimmed }}",
+    "emotes": [
+      {% for emote in page.emotes %}{"name": "{{ emote.name }}", "url": "{{ emote.url }}"{% if emote.fav %}, "fav": "{{ emote.fav }}"{% endif %}}{% unless forloop.last %},{% endunless %}
+      {% endfor %}]
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
