@@ -24,7 +24,7 @@ Comes with a read-only REST API for the image links!
 
 Edit `_config.yml` with your information
   - Sheepicon can be used with Discord emotes by setting these options:
-    - size64: true
+    - size48: true  *(or set size64 instead for larger images)*
     - titleInUrl: true
 
 Edit `index.md` for your Favorites
@@ -35,7 +35,7 @@ Edit `index.md` for your Favorites
 
 ## Updates
 
-Start a pull request and merge `coffeebank/sheepicon` into your repo to update.
+Merge updates when prompted by GitHub, from `coffeebank/sheepicon` into your repo.
 
 
 ## Attributions

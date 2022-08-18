@@ -15,6 +15,7 @@ themeCards: "#262626"
 
 # Settings
 
+size48: false # Resizes emotes for Discord use (sm size)
 size64: false # Resizes emotes for Discord use
 titleInUrl: false # Adds emote name to url
 
